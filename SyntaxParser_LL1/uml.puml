@@ -1,0 +1,40 @@
+@startuml
+
+class Entryset {
+    - entryset: list
+    - nextdic: dict
+    + __init__()
+    + __eq__(other)
+}
+
+class LR1 {
+    - grammar_list: list
+    - start_ch: str
+    - VN: list
+    - VT: list
+    - grammar_dic: dict
+    - First: dict
+    - s: list
+    - analyzed_dic: dict
+    + __init__(grammar_list)
+    + broaden()
+    + list_to_dict()
+    + getVN()
+    + getVT()
+    + getFIRST(rp)
+    + getFirst(v, first)
+    + FIRST()
+    + calEntryFamily()
+    + calEntry(S, ch)
+    + CLOSURE(S, entry_dic)
+    + sumEntry(S, entryList)
+    + getExpect(entry)
+    + GOTO(S, a)
+    + analyzed_tab()
+    + analyze(string)
+    + drawEntryFamily()
+}
+
+Entryset "1" --> "*" LR1 : contains
+
+@enduml

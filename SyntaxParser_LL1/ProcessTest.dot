@@ -1,0 +1,33 @@
+// 使用VsCode的Graphviz插件为代码绘制流程图，请根据我输入的代码，用中文生成DOT代码，用来绘制流程图。
+digraph LR1_Analysis_Stack_Process {
+    // 设置图形属性
+    graph [rankdir=TB, fontname="SimSun", fontsize=10];
+    node [shape=rectangle, fontname="SimSun", fontsize=10];
+
+    // 描述LR1分析栈过程
+    初始化分析 [label="初始化分析"];
+    读取字符 [label="读取字符"];
+    根据状态和字符查表 [label="根据当前状态和\n读取字符查找分析表"];
+    执行动作 [label="执行对应的动作"];
+    分析成功 [label="分析成功"];
+    错误处理 [label="错误处理"];
+
+    // 设置节点之间的关系
+    初始化分析 -> 读取字符;
+    读取字符 -> 根据状态和字符查表 [label="存在未读取字符", fontsize=10];
+    根据状态和字符查表 -> 执行动作 [label="存在对应动作        ", fontsize=10];
+    执行动作 -> 读取字符 [label="动作不为接受      ", fontsize=10];
+    执行动作 -> 分析成功 [label="动作为接受", fontsize=10];
+    根据状态和字符查表 -> 错误处理 [label="不存在对应动作        ", fontsize=10];
+    错误处理 -> 初始化分析 [label="存在错误  ", fontsize=10];
+}
+
+
+
+
+
+
+
+
+
+

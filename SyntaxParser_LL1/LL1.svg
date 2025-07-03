@@ -1,0 +1,92 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="247pt" height="369pt" viewBox="0.00 0.00 247.25 369.00">
+<g id="graph0" class="graph" transform="translate(4,365) scale(1)" data-name="LR1_Analysis_Stack_Process">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-365 243.25,-365 243.25,4 -4,4" style=""/>
+<!-- 初始化分析 -->
+<g id="node1" class="node" pointer-events="visible" data-name="初始化分析">
+
+<polygon fill="none" stroke="black" points="208.25,-361 154.25,-361 154.25,-325 208.25,-325 208.25,-361" style=""/>
+<text text-anchor="middle" x="181.25" y="-340" font-family="SimSun" font-size="10.00" style="">初始化分析</text>
+</g>
+<!-- 读取字符 -->
+<g id="node2" class="node" pointer-events="visible" data-name="读取字符">
+
+<polygon fill="none" stroke="black" points="164.25,-288 110.25,-288 110.25,-252 164.25,-252 164.25,-288" style=""/>
+<text text-anchor="middle" x="137.25" y="-267" font-family="SimSun" font-size="10.00" style="">读取字符</text>
+</g>
+<!-- 初始化分析&#45;&gt;读取字符 -->
+<g id="edge1" class="edge" data-name="初始化分析-&gt;读取字符">
+
+<path fill="none" stroke="black" d="M170.6,-324.81C165.57,-316.7 159.46,-306.84 153.84,-297.78" style=""/>
+<polygon fill="black" stroke="black" points="156.84,-295.97 148.6,-289.32 150.89,-299.66 156.84,-295.97" style=""/>
+</g>
+<!-- 根据状态和字符查表 -->
+<g id="node3" class="node" pointer-events="visible" data-name="根据状态和字符查表">
+
+<polygon fill="none" stroke="black" points="178.75,-204 95.75,-204 95.75,-168 178.75,-168 178.75,-204" style=""/>
+<text text-anchor="middle" x="137.25" y="-189" font-family="SimSun" font-size="10.00" style="">根据当前状态和</text>
+<text text-anchor="middle" x="137.25" y="-177" font-family="SimSun" font-size="10.00" style="">读取字符查找分析表</text>
+</g>
+<!-- 读取字符&#45;&gt;根据状态和字符查表 -->
+<g id="edge2" class="edge" data-name="读取字符-&gt;根据状态和字符查表">
+
+<path fill="none" stroke="black" d="M137.25,-251.61C137.25,-241.17 137.25,-227.64 137.25,-215.66" style=""/>
+<polygon fill="black" stroke="black" points="140.75,-215.88 137.25,-205.88 133.75,-215.88 140.75,-215.88" style=""/>
+<text text-anchor="middle" x="163.5" y="-225" font-family="Times,serif" font-size="10.00" style="">存在未读取字符</text>
+</g>
+<!-- 执行动作 -->
+<g id="node4" class="node" pointer-events="visible" data-name="执行动作">
+
+<polygon fill="none" stroke="black" points="68.25,-120 0.25,-120 0.25,-84 68.25,-84 68.25,-120" style=""/>
+<text text-anchor="middle" x="34.25" y="-99" font-family="SimSun" font-size="10.00" style="">执行对应的动作</text>
+</g>
+<!-- 根据状态和字符查表&#45;&gt;执行动作 -->
+<g id="edge3" class="edge" data-name="根据状态和字符查表-&gt;执行动作">
+
+<path fill="none" stroke="black" d="M95.53,-168.36C85.66,-163.33 75.59,-157.18 67.25,-150 60.6,-144.27 54.63,-136.93 49.64,-129.76" style=""/>
+<polygon fill="black" stroke="black" points="52.69,-128.02 44.32,-121.52 46.81,-131.82 52.69,-128.02" style=""/>
+<text text-anchor="middle" x="99.75" y="-141" font-family="Times,serif" font-size="10.00" style="">存在对应动作        </text>
+</g>
+<!-- 错误处理 -->
+<g id="node6" class="node" pointer-events="visible" data-name="错误处理">
+
+<polygon fill="none" stroke="black" points="209.25,-120 155.25,-120 155.25,-84 209.25,-84 209.25,-120" style=""/>
+<text text-anchor="middle" x="182.25" y="-99" font-family="SimSun" font-size="10.00" style="">错误处理</text>
+</g>
+<!-- 根据状态和字符查表&#45;&gt;错误处理 -->
+<g id="edge6" class="edge" data-name="根据状态和字符查表-&gt;错误处理">
+
+<path fill="none" stroke="black" d="M134.92,-167.61C134.45,-158.35 135.18,-147.05 139.75,-138 141.63,-134.28 144.1,-130.82 146.9,-127.63" style=""/>
+<polygon fill="black" stroke="black" points="149.11,-130.36 153.85,-120.88 144.23,-125.34 149.11,-130.36" style=""/>
+<text text-anchor="middle" x="176.5" y="-141" font-family="Times,serif" font-size="10.00" style="">不存在对应动作        </text>
+</g>
+<!-- 执行动作&#45;&gt;读取字符 -->
+<g id="edge4" class="edge" data-name="执行动作-&gt;读取字符">
+
+<path fill="none" stroke="black" d="M27.24,-120.38C19.89,-141.61 11.29,-177.91 26.25,-204 41.9,-231.29 73.94,-248.23 99.59,-257.95" style=""/>
+<polygon fill="black" stroke="black" points="98.1,-261.13 108.7,-261.17 100.44,-254.53 98.1,-261.13" style=""/>
+<text text-anchor="middle" x="56.25" y="-183" font-family="Times,serif" font-size="10.00" style="">动作不为接受      </text>
+</g>
+<!-- 分析成功 -->
+<g id="node5" class="node" pointer-events="visible" data-name="分析成功">
+
+<polygon fill="none" stroke="black" points="61.25,-36 7.25,-36 7.25,0 61.25,0 61.25,-36" style=""/>
+<text text-anchor="middle" x="34.25" y="-15" font-family="SimSun" font-size="10.00" style="">分析成功</text>
+</g>
+<!-- 执行动作&#45;&gt;分析成功 -->
+<g id="edge5" class="edge" data-name="执行动作-&gt;分析成功">
+
+<path fill="none" stroke="black" d="M34.25,-83.61C34.25,-73.17 34.25,-59.64 34.25,-47.66" style=""/>
+<polygon fill="black" stroke="black" points="37.75,-47.88 34.25,-37.88 30.75,-47.88 37.75,-47.88" style=""/>
+<text text-anchor="middle" x="53" y="-57" font-family="Times,serif" font-size="10.00" style="">动作为接受</text>
+</g>
+<!-- 错误处理&#45;&gt;初始化分析 -->
+<g id="edge7" class="edge" data-name="错误处理-&gt;初始化分析">
+
+<path fill="none" stroke="black" d="M201.21,-120.26C205.69,-125.48 209.86,-131.54 212.25,-138 214.1,-143 212.68,-144.68 212.25,-150 207.55,-208.61 194.9,-276.33 187.29,-313.65" style=""/>
+<polygon fill="black" stroke="black" points="183.92,-312.66 185.32,-323.16 190.77,-314.08 183.92,-312.66" style=""/>
+<text text-anchor="middle" x="221.75" y="-225" font-family="Times,serif" font-size="10.00" style="">存在错误  </text>
+</g>
+</g>
+</svg>
